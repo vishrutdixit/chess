@@ -7,4 +7,3 @@ func main() {
 	fmt.Println(sp.String())
 	fmt.Println(sp.WhitePawnBB.Draw())
 }
-

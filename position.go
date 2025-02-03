@@ -1,4 +1,3 @@
-
 package main
 
 import "strings"
@@ -8,19 +7,18 @@ import "strings"
 // castling rights, and the number of moves played. In short,
 // a position should include all of the game state.
 type Position struct {
-	WhitePawnBB Bitboard
+	WhitePawnBB   Bitboard
 	WhiteBishopBB Bitboard
 	WhiteKnightBB Bitboard
-	WhiteRookBB Bitboard
-	WhiteQueenBB Bitboard
-	WhiteKingBB Bitboard
-	BlackPawnBB Bitboard
+	WhiteRookBB   Bitboard
+	WhiteQueenBB  Bitboard
+	WhiteKingBB   Bitboard
+	BlackPawnBB   Bitboard
 	BlackBishopBB Bitboard
 	BlackKnightBB Bitboard
-	BlackRookBB Bitboard
-	BlackQueenBB Bitboard
-	BlackKingBB Bitboard
-		
+	BlackRookBB   Bitboard
+	BlackQueenBB  Bitboard
+	BlackKingBB   Bitboard
 }
 
 // Create starting position
@@ -43,10 +41,8 @@ func NewStartPosition() Position {
 	return p
 }
 
-
 // Create position from FEN
 func NewPositionFromFEN(FEN string) {}
-
 
 func (p Position) String() string {
 	var sb strings.Builder
@@ -89,26 +85,21 @@ func (p Position) String() string {
 	return sb.String()
 }
 
-
 // TODO: MOVE LATER
 
 type Piece int8
 
 const (
-	WhitePawn = 1
+	WhitePawn   = 1
 	WhiteBishop = 2
 	WhiteKnight = 3
-	WhiteRook = 4
-	WhiteQueen = 5
-	WhiteKing = 6
-	BlackPawn = -1
+	WhiteRook   = 4
+	WhiteQueen  = 5
+	WhiteKing   = 6
+	BlackPawn   = -1
 	BlackBishop = -2
 	BlackKnight = -3
-	BlackRook = -4
-	BlackQueen = -5
-	BlackKing = -6
+	BlackRook   = -4
+	BlackQueen  = -5
+	BlackKing   = -6
 )
-
-
-
-
